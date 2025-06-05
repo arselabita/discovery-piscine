@@ -1,0 +1,27 @@
+.dropdown {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding: 300px;
+}
+
+.dropdown button {
+  width: 50%;
+  max-width: 400px;
+  min-width: 200px;
+  font-size: 24px;
+  padding: 16px 24px;
+  border: none;
+  border-radius: 10px;
+  background-color: #6c36d8;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown button:hover {
+  background-color: #5a2db6;
+  transform: scale(1.05);
+}

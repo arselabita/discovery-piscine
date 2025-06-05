@@ -1,0 +1,28 @@
+html, body{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+table {
+    width: 100%;
+    height: 100%;
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+
+td {
+    padding: 20px;
+    background-color: rgb(137, 204, 182);
+}
+
+.first {
+
+    border-right: 1px solid black;
+    word-wrap: break-word;
+}
+
+.second {
+    background-color: pink
+}
