@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta
+      charset="UTF-8"
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <style>
+        body {
+            margin: 20px; 
+            background: hsl(70, 31%, 85%); 
+            text-align: center;
+        }
+        .toCenter {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .balloon {
+            width: 200px;
+            height: 200px;
+            background: red;
+            border-radius:50%;
+            position:relative;
+            box-shadow:inset -10px -10px 0 rgba(0,0,0,0.07);
+            margin:20px 30px;
+            transition:transform 0.5s ease;
+            z-index:10;
+            animation:balloons 4s ease-in-out infinite;
+            transform-origin:bottom center;
+        }
+    </style>
+    <title>Balloon</title>
+  </head>
+  <body>
+    <div class="toCenter">
+        <div class="balloon" id="balloon" onclick="RGBcolor()"></div>
+    </div>
+    <script>
+        const balloon = document.getElementById("balloon");
+
+        const colors = ["red", "green", "blue"];
+        let colorIndex = 0;
+        let size = 200;
+
+        balloon.addEventListener("click", () => {
+            size += 10;
+            colorIndex = (colorIndex + 1) % colors.length;
+            if (size > 420) {
+                alert ("AAAAAAAAHHHHH!! Balloooooonnn explooodeeddddd!");
+                size = 200;
+                colorIndex = 0;
+            }
+            updateBalloon();
+        });
+
+        function updateBalloon() {
+            balloon.style.width = size + "px";
+            balloon.style.height = size + "px";
+            balloon.style.backgroundColor = colors[colorIndex];
+        }
+    </script>
+  </body>
+</html>
