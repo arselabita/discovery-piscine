@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta
-      charset="UTF-8"
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link
       href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
       rel="stylesheet"
     />
     <style>
+      * {
+        box-sizing: border-box;
+      }
       html,
       body {
         margin: 0;
         padding: 0;
         height: 100%;
+        width: 100%;
       }
       body {
         background-image: url(images/p.jpg);
@@ -27,11 +28,21 @@
         justify-content: center;
         align-items: center;
       }
-
       .conteiner {
         display: flex;
         flex-direction: column;
         align-items: center;
+        box-sizing: border-box;
+      }
+      .conteiner h1 {
+        font-size: clamp(20px, 4vw, 78px);
+        margin-top: 80px;
+        margin-bottom: 60px;
+        color: rgb(39, 15, 253);
+        text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff,
+          1px 1px 0 #ffffff;
+        text-align: center;
+        animation: float 2s ease-in-out infinite;
 
       }
       .title {
@@ -39,13 +50,13 @@
         color: rgb(247, 28, 222);
         text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff,
           1px 1px 0 #ffffff;
-          margin-bottom: 50px;
+        margin-bottom: 40px;
       }
 
       .line {
         display: block;
         padding-bottom: 10px;
-        font-size: 40px;
+        font-size: clamp(20px, 4vw, 40px); 
         animation: float 2s ease-in-out infinite;
       }
 
@@ -65,6 +76,7 @@
         display: flex;
         gap: 25px;
         align-items: center;
+        animation: float 2s ease-in-out infinite;
       }
       .buttons button {
         background-color: rgb(247, 28, 222);
@@ -84,16 +96,30 @@
     <title>Main Page</title>
   </head>
   <body>
+    
     <div class="conteiner">
+      <h1>GAME START</h1>
       <div class="title">
         <span class="line">Choose a CV</span>
         <span class="line">that you like :p</span>
       </div>
       <div class="buttons">
-        <a ><button>Lilly's CV</button></a>
-       <a><button>Arsi's CV</button></a>
-        <a><button>Andrea's CV</button></a>
-        <a><button>Nicole's CV</button></a>
+        <a href="lilly-cv.html">
+          <button onclick="window.location.href=lilly-cv.html">
+            Lilly's CV
+          </button></a>
+        <a href="arsi-cv.html">
+          <button onclick="window.location.href=arsi-cv.html">
+            Arsi's CV
+          </button></a>
+        <a href="andrea-cv.html">
+          <button onclick="window.location.href=andrea-cv.html">
+            Andrea's CV
+          </button></a>
+        <a href="nicole-cv.html">
+          <button onclick="window.location.href=nicole-cv.html">
+            Nicole's CV
+          </button></a>
       </div>
     </div>
   </body>
